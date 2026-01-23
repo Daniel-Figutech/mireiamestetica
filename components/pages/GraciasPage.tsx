@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Phone, CheckCircle } from '../ui/Icons';
 
 export const GraciasPage: React.FC = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        if (params.get('converted') === 'success') {
+            // @ts-ignore
+            if (typeof fbq !== 'undefined') {
+                // @ts-ignore
+                fbq('track', 'Lead');
+            }
+        }
+    }, [location]);
     return (
         <main className="min-h-screen bg-gradient-to-br from-brand/10 to-white flex flex-col items-center justify-center p-8">
             <div className="max-w-xl w-full bg-white rounded-2xl shadow-xl p-8 md:p-12 text-center">
