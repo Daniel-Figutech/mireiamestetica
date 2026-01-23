@@ -2,9 +2,12 @@ import React from 'react';
 import { SectionTitle } from '../ui/Typography';
 import { Check, X, ArrowRight, Camera, Clock, ShieldCheck, Sun, User } from '../ui/Icons';
 import { Button } from '../ui/Button';
+import { useNavigate } from 'react-router-dom';
 import mireiaSecondary from '../../assets/mireia-secondary.jpg';
 
 export const Explanation: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -101,7 +104,7 @@ export const Explanation: React.FC = () => {
               <h3 className="text-2xl font-serif italic text-brand mb-6">Beneficios colaterales</h3>
               <ul className="space-y-3">
                 {[
-                  "Ahorras 30 min diarios de retoques",
+                  "Ahorras 30 min diarios de retoques",
                   "Te ves mejor en fotos y reuniones",
                   "Recuperas seguridad al 100 %",
                   "El resultado se mantiene sin importar la luz",
@@ -116,9 +119,6 @@ export const Explanation: React.FC = () => {
             </div>
 
             <div className="border-l border-white/10 pl-8 md:pl-12">
-              <h4 className="text-xl font-medium mb-4 flex items-center gap-2">
-                <Clock className="text-brand" size={20} /> Nota realista
-              </h4>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
                 Necesitarás 2 o 3 sesiones, pero el cambio se nota desde la primera. Sin quirófanos. Sin riesgos.
               </p>
@@ -134,9 +134,8 @@ export const Explanation: React.FC = () => {
             </div>
           </div>
         </div>
-
         <div className="mt-12 text-center">
-          <Button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+          <Button onClick={() => navigate('/form')}>
             Empieza tu cambio hoy
           </Button>
         </div>

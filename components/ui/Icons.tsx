@@ -1,20 +1,21 @@
-import { 
-  Check, 
-  X, 
-  Menu, 
-  Phone, 
-  Calendar, 
-  Star, 
-  ChevronDown, 
-  ShieldCheck, 
-  Clock, 
-  MapPin, 
-  User, 
+import {
+  Check,
+  X,
+  Menu,
+  Phone,
+  Calendar,
+  Star,
+  ChevronDown,
+  ShieldCheck,
+  Clock,
+  MapPin,
+  User,
   ArrowRight,
   AlertCircle,
   Camera,
   Sun,
-  MessageCircle
+  MessageCircle,
+  CheckCircle
 } from 'lucide-react';
 
 export {
@@ -33,5 +34,6 @@ export {
   AlertCircle,
   Camera,
   Sun,
-  MessageCircle
+  MessageCircle,
+  CheckCircle
 };

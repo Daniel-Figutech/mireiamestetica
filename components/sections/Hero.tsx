@@ -1,12 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '../ui/Button';
 import { Check, X, AlertCircle } from '../ui/Icons';
 import shavedEffect from '../../assets/shaved-effect.jpg';
 
 export const Hero: React.FC = () => {
-  const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const navigate = useNavigate();
 
   return (
     <div className="relative bg-dark-900 text-white overflow-hidden">
@@ -44,7 +43,7 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          <Button onClick={scrollToContact} className="text-lg shadow-brand/20 shadow-xl">
+          <Button onClick={() => navigate('/form')} className="text-lg shadow-brand/20 shadow-xl">
             Empieza tu cambio hoy
           </Button>
         </div>

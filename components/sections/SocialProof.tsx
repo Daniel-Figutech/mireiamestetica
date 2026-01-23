@@ -86,9 +86,6 @@ export const Gallery: React.FC = () => {
             </div>
           ))}
         </div>
-        <p className="text-center text-gray-500 mt-8 text-sm">
-          Fotos reales de tratamientos realizados. Placeholder (800x800).
-        </p>
       </div>
     </section>
   );

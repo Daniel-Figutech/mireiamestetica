@@ -1,13 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { SectionTitle } from '../ui/Typography';
 import { Check, X } from '../ui/Icons';
 import { Button } from '../ui/Button';
 
 export const Comparison: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle 
+        <SectionTitle
           title="Micropigmentación capilar profesional vs. las otras opciones"
           subtitle="COMPARATIVA"
           accentWord="profesional"
@@ -37,16 +40,16 @@ export const Comparison: React.FC = () => {
                 <tr key={i} className={i % 2 === 0 ? "bg-transparent" : "bg-gray-50"}>
                   <td className="p-4 font-medium text-dark-900">{row.c}</td>
                   <td className="p-4 bg-brand/5 font-semibold text-dark-900 flex items-center gap-2">
-                    <Check size={16} className="text-green-600"/> {row.m}
+                    <Check size={16} className="text-green-600" /> {row.m}
                   </td>
                   <td className="p-4 text-gray-500">
-                    <div className="flex items-center gap-2"><X size={16} className="text-red-400"/> {row.f}</div>
+                    <div className="flex items-center gap-2"><X size={16} className="text-red-400" /> {row.f}</div>
                   </td>
                   <td className="p-4 text-gray-500">
-                    <div className="flex items-center gap-2"><X size={16} className="text-red-400"/> {row.w}</div>
+                    <div className="flex items-center gap-2"><X size={16} className="text-red-400" /> {row.w}</div>
                   </td>
                   <td className="p-4 text-gray-500">
-                    <div className="flex items-center gap-2"><X size={16} className="text-red-400"/> {row.l}</div>
+                    <div className="flex items-center gap-2"><X size={16} className="text-red-400" /> {row.l}</div>
                   </td>
                 </tr>
               ))}
@@ -59,9 +62,9 @@ export const Comparison: React.FC = () => {
         </div>
 
         <div className="text-center mt-12">
-           <Button onClick={() => document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'})}>
-              Empieza tu cambio hoy
-           </Button>
+          <Button onClick={() => navigate('/form')}>
+            Empieza tu cambio hoy
+          </Button>
         </div>
 
       </div>
