@@ -2,8 +2,10 @@ import React from 'react';
 import { SectionTitle } from '../ui/Typography';
 import { ArrowRight } from '../ui/Icons';
 import { Button } from '../ui/Button';
+import { useNavigate } from 'react-router-dom';
 
 export const FAQ: React.FC = () => {
+  const navigate = useNavigate();
   const faqs = [
     { q: "¿Cuánto dura el tratamiento?", a: "El tratamiento inicial se completa en 2 o 3 sesiones. Luego, basta con ajustes cada cierto tiempo.", r: "Resultado real, sin mantenimiento constante." },
     { q: "¿Duele mucho?", a: "No. Se describe como una molestia leve. Se adapta a tu sensibilidad.", r: "No hay dolor extremo ni sorpresas." },
@@ -15,7 +17,7 @@ export const FAQ: React.FC = () => {
   return (
     <section className="py-20 bg-white" id="faq">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle 
+        <SectionTitle
           title="Preguntas Frecuentes"
           subtitle="DUDAS"
           accentWord="Frecuentes"
@@ -32,17 +34,17 @@ export const FAQ: React.FC = () => {
             </div>
           ))}
         </div>
-        
+
         {/* Contact Anchor */}
         <div id="contact" className="mt-20 bg-dark-900 rounded-2xl p-12 text-center text-white relative overflow-hidden">
-           <div className="absolute inset-0 bg-brand/10 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-           <div className="relative z-10">
-              <h2 className="text-3xl md:text-4xl font-serif mb-6">¿Listo para recuperar tu marco capilar?</h2>
-              <p className="text-gray-300 mb-8 max-w-xl mx-auto">Agenda tu diagnóstico gratuito y hablemos de tu caso. Sin compromiso.</p>
-              <Button onClick={() => window.open('https://cal.com', '_blank')} className="text-xl px-12 py-5 shadow-2xl">
-                Reservar Diagnóstico Gratuito
-              </Button>
-           </div>
+          <div className="absolute inset-0 bg-brand/10 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+          <div className="relative z-10">
+            <h2 className="text-3xl md:text-4xl font-serif mb-6">¿Listo para recuperar tu marco capilar?</h2>
+            <p className="text-gray-300 mb-8 max-w-xl mx-auto">Agenda tu diagnóstico gratuito y hablemos de tu caso. Sin compromiso.</p>
+            <Button onClick={() => navigate('/form')} className="text-xl px-12 py-5 shadow-2xl">
+              Reservar Diagnóstico Gratuito
+            </Button>
+          </div>
         </div>
 
       </div>
