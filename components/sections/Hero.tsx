@@ -20,7 +20,7 @@ export const Hero: React.FC = () => {
         {/* Content */}
         <div className="flex-1 z-10 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight mb-6">
-            Di adiós a la alopecia y recupera la confianza en tu imagen
+            Di adiós a la <span className="italic text-brand">alopecia</span> y recupera la <span className="italic text-brand">confianza</span> en tu imagen
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl font-light leading-relaxed mx-auto md:mx-0">
